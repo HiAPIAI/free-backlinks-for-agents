@@ -1,0 +1,31 @@
+name: 站点更正 / 新增 · Site update
+description: 入口失效、改成收费、链接属性变化，或新增你发成过的免费站
+labels: ["site-update"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型 · Type
+      options:
+        - 入口失效 · Broken entry
+        - 改成收费 · Now paid
+        - 链接属性变化 · Link attribute changed
+        - 新增渠道 · New source
+    validations:
+      required: true
+  - type: input
+    id: site
+    attributes:
+      label: 站点和入口 · Site and submit URL
+    validations:
+      required: true
+  - type: input
+    id: proof
+    attributes:
+      label: 退出登录后能看到链接的公开页 · Public page showing the link (logged out)
+  - type: input
+    id: date
+    attributes:
+      label: 核实日期 · Date checked
+    validations:
+      required: true
